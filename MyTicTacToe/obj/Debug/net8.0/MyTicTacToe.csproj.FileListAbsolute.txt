@@ -1,0 +1,14 @@
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\bin\Debug\net8.0\MyTicTacToe.exe
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\bin\Debug\net8.0\MyTicTacToe.deps.json
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\bin\Debug\net8.0\MyTicTacToe.runtimeconfig.json
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\bin\Debug\net8.0\MyTicTacToe.dll
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\bin\Debug\net8.0\MyTicTacToe.pdb
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\MyTicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\MyTicTacToe.AssemblyInfoInputs.cache
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\MyTicTacToe.AssemblyInfo.cs
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\MyTicTacToe.csproj.CoreCompileInputs.cache
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\MyTicTacToe.dll
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\refint\MyTicTacToe.dll
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\MyTicTacToe.pdb
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\MyTicTacToe.genruntimeconfig.cache
+H:\Personal Projects\C#_tictactoe\MyTicTacToe\obj\Debug\net8.0\ref\MyTicTacToe.dll
