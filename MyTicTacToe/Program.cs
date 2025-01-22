@@ -4,6 +4,7 @@
 */
 
 using System.Net.NetworkInformation;
+using System.Reflection;
 
 class TicTacToe {
 
@@ -38,8 +39,19 @@ class TicTacToe {
                     done = true;
                     makeMove(i);    // update field if input is accepted
                     displayField(); // display updated field
-                    this.currentPlayer = ((this.currentPlayer)%2)+1;    // next players turn
+                    
                     // check whether game is over
+                    var res2 = isGameOver();
+                    if (res2.Item2){
+                        Console.WriteLine($"Player {currentPlayer} wins!");
+                        isOver = true;
+                    }
+                    if (res2.Item1) {
+                        Console.WriteLine("No more moves possible!");
+                        isOver = true;
+                    }
+
+                    this.currentPlayer = ((this.currentPlayer)%2)+1;    // next players turn
                 }
             }
         }
@@ -82,6 +94,37 @@ class TicTacToe {
             mark = "O";
         }
         this.Field[verifiedInptut] = mark;
+    }
+
+    public (bool, bool) isGameOver(){
+        // no more moves possible
+        bool exh = false;
+        if (this.Field.Contains("_")){
+            exh = false;
+        } else {
+            exh = true;
+        }
+
+        // rows 
+        for (int i=0; i<3;i++){
+            if ((this.Field[i]!="_")&&(this.Field[i] == this.Field[i+1]) && (this.Field[i+1]==this.Field[i+2])){
+                return (exh,true);
+            }
+        }
+        // columns
+        for (int i=0; i<3;i++){
+            if ((this.Field[i]!="_")&&(this.Field[i] == this.Field[i+3]) && (this.Field[i+3]==this.Field[i+6])){
+                return (exh,true);
+            }
+        }
+        // diagonal
+        if ((this.Field[0]!="_")&&(this.Field[0] == this.Field[4]) && (this.Field[4]==this.Field[8])){
+            return (exh,true);
+        }
+        if ((this.Field[2]!="_")&&(this.Field[2] == this.Field[4]) && (this.Field[4]==this.Field[6])){
+            return (exh,true);
+        }
+        return (exh,false);
     }
 
 }
