@@ -3,22 +3,20 @@
     Simple TicTacToe game to familiarize with C# 
 */
 
-using System.Net.NetworkInformation;
-using System.Reflection;
-
 class TicTacToe {
 
-    public string[] Field = ["_","_","_","_","_","_","_","_","_"];
-    public int currentPlayer = 1;
+    public string[] Field = ["_","_","_","_","_","_","_","_","_"];  // Initial game field state
+    public int currentPlayer = 1;   // player 1 always starts
 
     public static void Main(){
         var game = new TicTacToe();
         game.Game();
+        Console.WriteLine("Game over! I hope it was fun :D");
     }
 
     public void Game(){
         Console.WriteLine("Hello to TicTacToe!\nStarting game...");
-        displayField();
+        displayField(); // display initial field
 
         bool isOver = false;    // continue until the game is over
 
@@ -32,22 +30,22 @@ class TicTacToe {
                 bool b = res.Item1;
                 int i = res.Item2;
                 if (b == false) {
-                    Console.WriteLine("Invalid choice. Please try again!");
+                    Console.WriteLine("Invalid choice. Please try again!"); // loop until valid input is found
                 }
                 else {
-                    Console.WriteLine("Choice accepted.");
+                    Console.WriteLine("Choice accepted.");  
                     done = true;
-                    makeMove(i);    // update field if input is accepted
+                    makeMove(i);    // valid input updates field
                     displayField(); // display updated field
                     
                     // check whether game is over
                     var res2 = isGameOver();
                     if (res2.Item2){
-                        Console.WriteLine($"Player {currentPlayer} wins!");
+                        Console.WriteLine($"Player {currentPlayer} wins!"); // one player won
                         isOver = true;
                     }
                     if (res2.Item1) {
-                        Console.WriteLine("No more moves possible!");
+                        Console.WriteLine("No more moves possible!");   // no body won
                         isOver = true;
                     }
 
